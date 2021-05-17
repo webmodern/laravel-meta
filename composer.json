@@ -1,11 +1,11 @@
 {
-    "name": "zoha/laravel-meta",
-    "description": "a package for working with models meta",
+    "name": "webmodern/laravel-meta",
+    "description": "a package for working with models meta (Fork Zoha/laravel-meta)",
     "keywords": ["meta" , "laravel" , "data" , "package"],
     "type": "package",
     "license": "MIT",
 	"source": {
-        "url": "https://github.com/ZohaBanam/laravel-meta.git",
+        "url": "https://github.com/webmodern/laravel-meta.git",
         "type": "git",
 		"reference": "0ac3f7b"
     },
