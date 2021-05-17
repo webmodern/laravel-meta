@@ -149,7 +149,7 @@ class MetaHelper
     public static function convertMetaValueForSearch($value)
     {
         if (is_array($value)) {
-            return json_encode($value);
+            return json_encode($value, JSON_UNESCAPED_UNICODE);
         } elseif ($value instanceof Collection || $value instanceof \Illuminate\Support\Collection) {
             return $value->toJson();
         } elseif (is_bool($value)) {
@@ -167,7 +167,7 @@ class MetaHelper
     protected static function convertToStringType($value): string
     {
         if (is_array($value)) {
-            $value = json_encode($value);
+            $value = json_encode($value, JSON_UNESCAPED_UNICODE);
         } elseif ($value instanceof Collection || $value instanceof \Illuminate\Support\Collection) {
             $value = $value->toJson();
         } elseif (is_bool($value)) {
@@ -223,7 +223,7 @@ class MetaHelper
         if ($value instanceof Collection || $value instanceof \Illuminate\Support\Collection) {
             $value = $value->toJson();
         } elseif (is_array($value)) {
-            $value = json_encode($value);
+            $value = json_encode($value, JSON_UNESCAPED_UNICODE);
         } else {
             $value = is_string($value) && (is_object(json_decode($value)) || is_array(json_decode($value))) ? $value : '{}';
         }
